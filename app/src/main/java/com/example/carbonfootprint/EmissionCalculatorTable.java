@@ -2,15 +2,16 @@ package com.example.carbonfootprint;
 
 
 import java.util.Hashtable;
+import java.util.LinkedHashMap;
 
 public class EmissionCalculatorTable {
     private static EmissionCalculatorTable instance = new EmissionCalculatorTable();
-    static private Hashtable<String,Float> emissiontable;
+    static private LinkedHashMap<String,Float> emissiontable;
     static private Hashtable<String,Float> conversionTable;
 
 
     private EmissionCalculatorTable() {
-    emissiontable = new Hashtable<String,Float>();
+    emissiontable = new LinkedHashMap<String,Float>();
     conversionTable = new Hashtable<String,Float>();
     }
 
@@ -36,7 +37,7 @@ public class EmissionCalculatorTable {
         conversionTableValues();
     }
 
-    public static Hashtable getEmissionTable(){
+    public static LinkedHashMap getEmissionTable(){
        return emissiontable;}
 
     /*
@@ -48,4 +49,11 @@ public class EmissionCalculatorTable {
         Float value = factor*amount;
         emissiontable.put(type,value);
     }
+
+    public static void removeLast() {
+            String lastkey = String.valueOf(emissiontable.entrySet().toArray()[emissiontable.size() - 1]);
+            emissiontable.remove(lastkey);
+        }
+
 }
+

@@ -17,8 +17,8 @@ import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 
 import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 
 
 /*
@@ -32,7 +32,7 @@ public class ChartBuilder {
                         R.color.pastelGreen, R.color.pastelTurquoise, R.color.pastelTeal};
     }
 
-    public static PieChart buildPieChart(Hashtable<String,Float> ht, Context context){
+    public static PieChart buildPieChart(LinkedHashMap<String, Float> ht, Context context){
         PieData piedata = new PieData();
         ArrayList<PieEntry> stats = new ArrayList<>();
         Iterator<String> iterator = ht.keySet().iterator();
@@ -51,7 +51,7 @@ public class ChartBuilder {
         return(chart);
     }
 
-    public static BarChart buildBarChart(Hashtable<String,Float> ht, Context context){
+    public static BarChart buildBarChart(LinkedHashMap<String, Float> ht, Context context){
         BarData bdata = new BarData();
         Iterator<String> iterator = ht.keySet().iterator();
         int i;
@@ -76,7 +76,7 @@ public class ChartBuilder {
         return(chart);
     }
 
-    public static TableLayout buildTable(Hashtable<String,Float> ht, Context context){
+    public static TableLayout buildTable(LinkedHashMap<String, Float> ht, Context context){
         TableLayout table = new TableLayout(context);
         Iterator<String> iterator = ht.keySet().iterator();
         while (iterator.hasNext()) {
