@@ -31,7 +31,7 @@
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/yellow"
+                android:buttonTint="@color/pastelBlue"
                 android:tag="0.0"
                 android:text="@string/answer_plane_0"
                 android:textColor="#FFFFFF" />
@@ -39,7 +39,7 @@
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/yellow"
+                android:buttonTint="@color/pastelBlue"
                 android:tag="1000.0"
                 android:text="@string/answer_plane_1"
                 android:textColor="#FFFFFF" />
@@ -47,7 +47,7 @@
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/yellow"
+                android:buttonTint="@color/pastelBlue"
                 android:tag="2000.0"
                 android:text="@string/answer_plane_2"
                 android:textColor="#FFFFFF" />
@@ -55,7 +55,7 @@
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/yellow"
+                android:buttonTint="@color/pastelBlue"
                 android:tag="4000.0"
                 android:text="@string/answer_plane_3"
                 android:textColor="#FFFFFF" />
@@ -63,7 +63,7 @@
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/yellow"
+                android:buttonTint="@color/pastelBlue"
                 android:tag="6000.0"
                 android:text="@string/answer_plane_4"
                 android:textColor="#FFFFFF" />
@@ -71,7 +71,7 @@
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/yellow"
+                android:buttonTint="@color/pastelBlue"
                 android:tag="12000.0"
                 android:text="@string/answer_plane_5"
                 android:textColor="#FFFFFF" />

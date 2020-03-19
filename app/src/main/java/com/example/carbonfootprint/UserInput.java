@@ -12,12 +12,10 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.List;
 
 public class UserInput extends AppCompatActivity {
     private int stage;
-    private int backlines;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,26 +26,25 @@ public class UserInput extends AppCompatActivity {
 
         Intent intent = getIntent();
         stage = intent.getIntExtra("NEXT_STAGE",0);
-        backlines = intent.getIntExtra("BACK_LINES",0);
-
 
         switch (stage){
             case 0:
-                title.setText(R.string.travelTitle);
+                title.setText("Travel");
+                title.setTextColor(getResources().getColor(R.color.pastelGreen));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_public_transport,null));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_car,null));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_plane,null));
                 break;
             case 1:
-                title.setText(R.string.electricTitle);
-                title.setTextColor(getResources().getColor(R.color.orange));
+                title.setText("Electronic Devices");
+                title.setTextColor(getResources().getColor(R.color.pastelGreen));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_pc,null));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_laptop,null));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_printer,null));
                 break;
             case 2:
-                title.setText(R.string.facilitiesTitle);
-                title.setTextColor(getResources().getColor(R.color.colorPrimary));
+                title.setText("On Campus");
+                title.setTextColor(getResources().getColor(R.color.pastelGreen));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_gym,null));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_library,null));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_lectures,null));
@@ -75,16 +72,13 @@ public class UserInput extends AppCompatActivity {
                 String n = (String) b.getTag();
                 Float answer = Float.parseFloat(n);
                 EmissionCalculatorTable.calculateAndRecord(category, answer);
-                backlines++;
             }}
 
         stage++;
         Intent next;
         if(stage == 3){next = new Intent(this,ResultsPage.class);}
         else {next = new Intent(this, UserInput.class);
-        next.putExtra("NEXT_STAGE", stage);
-        }
-        next.putExtra("BACK_LINES",backlines);
+        next.putExtra("NEXT_STAGE", stage);}
         startActivity(next);
 
     }
@@ -106,19 +100,9 @@ public class UserInput extends AppCompatActivity {
         return visited;
     }
 
-    public void back(View view)
+    public void backHome(View view)
     {
-        if(stage==0) {
-            Intent back = new Intent(this, MainActivity.class);
-            startActivity(back);
-        }
-        else{
-            Intent back = new Intent(this, UserInput.class);
-            stage--;
-            back.putExtra("NEXT_STAGE",stage);
-            for(int i=0 ; i<backlines ; i++){EmissionCalculatorTable.removeLast();}
-            startActivity(back);
-
-        }
+        Intent back = new Intent(this, MainActivity.class);
+        startActivity(back);
     }
 }
