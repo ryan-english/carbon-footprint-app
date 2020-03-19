@@ -5,6 +5,8 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
+
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.BarData;
@@ -43,6 +45,7 @@ public class ChartBuilder {
         PieChart chart = new PieChart(context);
         chart.setData(piedata);
         chart.setHoleColor(212121);
+        chart.getLegend().setTextColor(ContextCompat.getColor(context,R.color.white));
         return(chart);
     }
 
@@ -64,6 +67,10 @@ public class ChartBuilder {
 
         BarChart chart = new BarChart(context);
         chart.setData(bdata);
+        chart.getXAxis().setDrawLabels(false);
+        chart.getAxisLeft().setTextColor(ContextCompat.getColor(context,R.color.white));
+        chart.getAxisRight().setDrawLabels(false);
+        chart.getLegend().setTextColor((ContextCompat.getColor(context,R.color.white)));
         return(chart);
     }
 
@@ -77,8 +84,10 @@ public class ChartBuilder {
             TextView label = new TextView(context);
             TextView number = new TextView(context);
             label.setText(getStringResource(key, context));
+            label.setTextColor((ContextCompat.getColor(context,R.color.white)));
 
             number.setText(value.toString());
+            number.setTextColor(ContextCompat.getColor(context,R.color.white));
             row.addView(label);
             row.addView(number);
             table.addView(row);
