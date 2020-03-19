@@ -7,24 +7,29 @@
     tools:context=".UserInput"
     android:background="#212121">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="25dp"
-        android:text="@string/travelTitle"
-        android:textColor="@color/yellow"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title">
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/travelTitle"
+                android:textColor="@color/yellow"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:id="@+id/scrollLayout"
@@ -32,41 +37,35 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
+            </LinearLayout>
 
+        <RelativeLayout
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="55dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/nextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:backgroundTint="@color/pastelGreen"
+                android:onClick="toNext"
+                android:text="@string/next"
+                android:layout_alignParentRight="true"/>
 
-            <RelativeLayout
-                android:layout_width="310dp"
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="55dp"
-                android:orientation="horizontal">
+                android:backgroundTint="@color/pastelGreen"
+                android:onClick="toNext"
+                android:text="@string/back"
+                android:layout_alignParentLeft="true"/>
 
-                <Button
-                    android:id="@+id/nextButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/pastelGreen"
-                    android:onClick="toNext"
-                    android:text="@string/next"
-                    android:layout_alignParentRight="true"/>
-
-                <Button
-                    android:id="@+id/backButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/pastelGreen"
-                    android:onClick="toNext"
-                    android:text="@string/back"
-                    android:layout_alignParentLeft="true"/>
-
-            </RelativeLayout>
-
-            </LinearLayout>
+        </RelativeLayout>
 
         </LinearLayout>
 
