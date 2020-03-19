@@ -5,19 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UserInput"
-    android:background="#212121">
+    android:background="#000000">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/travelTitle"
+        android:textColor="@color/yellow"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/nextButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/title">
 
         <LinearLayout
+            android:id="@+id/scrollLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+<<<<<<< HEAD
             <TextView
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
@@ -38,7 +55,8 @@
                 android:layout_marginLeft="55dp"
                 android:layout_marginTop="40dp"
                 android:text="@string/question1"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:id="@+id/radioGroup"
@@ -95,10 +113,11 @@
                 android:id="@+id/question2"
                 android:layout_width="310dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginLeft="55dp"
                 android:text="@string/question2"
                 android:textColor="#FFFFFF"
-                android:layout_marginStart="55dp"
-                android:layout_marginLeft="55dp" />
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:id="@+id/radioGroup2"
@@ -158,10 +177,11 @@
                 android:id="@+id/question3"
                 android:layout_width="310dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginLeft="55dp"
                 android:text="@string/question3"
                 android:textColor="#FFFFFF"
-                android:layout_marginStart="55dp"
-                android:layout_marginLeft="55dp" />
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:id="@+id/radioGroup3"
@@ -248,9 +268,25 @@
                     android:onClick="electric"
                     android:text="@string/next" />
             </RelativeLayout>
+=======
+>>>>>>> 8da514551092eae6fba319a0f4647a26ac6cc74f
 
         </LinearLayout>
 
     </ScrollView>
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="toNext"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="55dp"
+            android:text="@string/question_car"
+            android:textColor="#FFFFFF" />
+
+        <RadioGroup
+            android:layout_width="310dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="10dp"
+            android:category="type_car"
+            android:tag="type_car">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/yellow"
+                android:tag="0.0"
+                android:text="@string/answer_car_0"
+                android:textColor="#FFFFFF"
+                android:value="false">
+
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/yellow"
+                android:tag="2.0"
+                android:text="@string/answer_car_1"
+                android:textColor="#FFFFFF" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/yellow"
+                android:tag="4.0"
+                android:text="@string/answer_car_2"
+                android:textColor="#FFFFFF" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/yellow"
+                android:tag="8.0"
+                android:text="@string/answer_car_3"
+                android:textColor="#FFFFFF" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/yellow"
+                android:tag="12.0"
+                android:text="@string/answer_car_4"
+                android:textColor="#FFFFFF" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

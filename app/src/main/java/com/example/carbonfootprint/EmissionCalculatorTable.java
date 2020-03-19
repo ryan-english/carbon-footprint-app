@@ -19,9 +19,15 @@ public class EmissionCalculatorTable {
      */
     private static void conversionTableValues(){
         conversionTable.put("type_car",1.0f);
-        conversionTable.put("type_plane",2.0f);
+        conversionTable.put("type_plane",0.02f);
         conversionTable.put("type_computer",1.5f);
         conversionTable.put("type_train",0.1f);
+        conversionTable.put("type_laptop",0.1f);
+        conversionTable.put("type_printer",0.1f);
+        conversionTable.put("type_gym",0.8f);
+        conversionTable.put("type_library",0.1f);
+        conversionTable.put("type_lecture",0.1f);
+
     }
 
     public static void initialise(){

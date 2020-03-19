@@ -27,13 +27,13 @@ public class ResultsPage extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int screenheight = displayMetrics.heightPixels;
         int screenwidth = displayMetrics.widthPixels;
-
+/*
         EmissionCalculatorTable.initialise();
         EmissionCalculatorTable.calculateAndRecord("type_car",100.0f);
         EmissionCalculatorTable.calculateAndRecord("type_plane", 40.0f);
         EmissionCalculatorTable.calculateAndRecord("type_computer",400.0f);
         EmissionCalculatorTable.calculateAndRecord("type_train",300.0f);
-
+*/
         Hashtable emissionStats = EmissionCalculatorTable.getEmissionTable();
 
         addPie(emissionStats, screenwidth, screenheight);
@@ -50,7 +50,7 @@ public class ResultsPage extends AppCompatActivity {
 
     public void backFacility(View view)
     {
-        Intent back = new Intent(this, Input3.class);
+        Intent back = new Intent(this, MainActivity.class);
         startActivity(back);
     }
 

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/question_printer"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="55dp" />
+
+    <RadioGroup
+        android:layout_width="310dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:tag="type_printer">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/orange"
+            android:text="@string/answer_printer_0"
+            android:textColor="#FFFFFF"
+            android:tag="0.0"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/orange"
+            android:text="@string/answer_printer_1"
+            android:textColor="#FFFFFF"
+            android:tag="2.0"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/orange"
+            android:text="@string/answer_printer_2"
+            android:textColor="#FFFFFF"
+            android:tag="5.0"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/orange"
+            android:text="@string/answer_printer_3"
+            android:textColor="#FFFFFF"
+            android:tag="7.0" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/orange"
+            android:text="@string/answer_printer_4"
+            android:textColor="#FFFFFF"
+            android:tag="12.0"/>
+    </RadioGroup>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
