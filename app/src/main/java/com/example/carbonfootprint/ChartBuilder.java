@@ -27,7 +27,9 @@ Class for making charts with data from hashtables
 public class ChartBuilder {
 
     public static int[] colorset(){
-        return new int[]{R.color.colorPrimary, R.color.colorPrimaryDark, R.color.colorAccent};
+        return new int[]{R.color.pastelPink, R.color.pastelPurple, R.color.pastelBlue,
+                        R.color.pastelYellow, R.color.pastelOrange, R.color.pastelPeach,
+                        R.color.pastelGreen, R.color.pastelTurquoise, R.color.pastelTeal};
     }
 
     public static PieChart buildPieChart(Hashtable<String,Float> ht, Context context){

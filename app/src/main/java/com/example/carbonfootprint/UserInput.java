@@ -34,7 +34,7 @@ public class UserInput extends AppCompatActivity {
                 title.setText("Travel");
                 layout.addView(getLayoutInflater().inflate(R.layout.question_public_transport,null));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_car,null));
-               layout.addView(getLayoutInflater().inflate(R.layout.question_plane,null));
+                layout.addView(getLayoutInflater().inflate(R.layout.question_plane,null));
                 break;
             case 1:
                 title.setText("Electronic Devices");
