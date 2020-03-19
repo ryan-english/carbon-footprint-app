@@ -27,25 +27,24 @@ public class UserInput extends AppCompatActivity {
         Intent intent = getIntent();
         stage = intent.getIntExtra("NEXT_STAGE",0);
 
-
-
         switch (stage){
             case 0:
                 title.setText("Travel");
+                title.setTextColor(getResources().getColor(R.color.pastelGreen));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_public_transport,null));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_car,null));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_plane,null));
                 break;
             case 1:
                 title.setText("Electronic Devices");
-                title.setTextColor(getResources().getColor(R.color.orange));
+                title.setTextColor(getResources().getColor(R.color.pastelGreen));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_pc,null));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_laptop,null));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_printer,null));
                 break;
             case 2:
                 title.setText("On Campus");
-                title.setTextColor(getResources().getColor(R.color.colorPrimary));
+                title.setTextColor(getResources().getColor(R.color.pastelGreen));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_gym,null));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_library,null));
                 layout.addView(getLayoutInflater().inflate(R.layout.question_lectures,null));

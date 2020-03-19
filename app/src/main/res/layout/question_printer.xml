@@ -29,7 +29,7 @@
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/orange"
+            android:buttonTint="@color/pastelPeach"
             android:text="@string/answer_printer_0"
             android:textColor="#FFFFFF"
             android:tag="0.0"/>
@@ -37,7 +37,7 @@
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/orange"
+            android:buttonTint="@color/pastelPeach"
             android:text="@string/answer_printer_1"
             android:textColor="#FFFFFF"
             android:tag="2.0"/>
@@ -45,7 +45,7 @@
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/orange"
+            android:buttonTint="@color/pastelPeach"
             android:text="@string/answer_printer_2"
             android:textColor="#FFFFFF"
             android:tag="5.0"/>
@@ -53,7 +53,7 @@
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/orange"
+            android:buttonTint="@color/pastelPeach"
             android:text="@string/answer_printer_3"
             android:textColor="#FFFFFF"
             android:tag="7.0" />
@@ -61,7 +61,7 @@
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/orange"
+            android:buttonTint="@color/pastelPeach"
             android:text="@string/answer_printer_4"
             android:textColor="#FFFFFF"
             android:tag="12.0"/>
