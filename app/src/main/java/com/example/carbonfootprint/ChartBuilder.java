@@ -42,6 +42,7 @@ public class ChartBuilder {
 
         PieChart chart = new PieChart(context);
         chart.setData(piedata);
+        chart.setHoleColor(212121);
         return(chart);
     }
 
