@@ -28,8 +28,6 @@
     <string name="answer15">Up to 6000 miles</string>
     <string name="answer">Up to 12000 miles</string>
 
-    <string name="next">Next</string>
-
     <string name="electricTitle">Electronic Devices</string>
     <string name="question4">How many hours per week do you use the PCs at university?</string>
     <string name="answer16">0 hours</string>
@@ -75,11 +73,21 @@
     <string name="results">Results</string>
 
     <string name="home">Home</string>
-    <string name="type_car">Car travel</string>
-    <string name="type_plane">Air travel</string>
-    <string name="type_computer">PC use</string>
-    <string name="type_train">Rail travel</string>
+    <string name="next">Next</string>
     <string name="start">Start</string>
     <string name="back">Back</string>
+
+    <string name="type_car">Car travel</string>
+    <string name="type_plane">Air travel</string>
+    <string name="type_train">Rail travel</string>
+
+    <string name="type_lecture">Lectures</string>
+    <string name="type_gym">Gym use</string>
+    <string name="type_library">Library use</string>
+
+    <string name="type_laptop">Laptop use</string>
+    <string name="type_computer">PC Use</string>
+    <string name="type_printer">Printing</string>
+
 
 </resources>
