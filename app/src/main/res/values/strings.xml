@@ -6,72 +6,73 @@
                             \ncampus at the University of Strathclyde</string>
 
     <string name="travelTitle">Travel</string>
-    <string name="question1">How many hours per week do you spend in public transport on your commute to university?</string>
-    <string name="answer1">0 hours</string>
-    <string name="answer2">1 to 3 hours</string>
-    <string name="answer3">3 to 6 hours</string>
-    <string name="answer4">6 to 9 hours</string>
-    <string name="answer5">Over 9 hours</string>
+    <string name="question_public_transport">How many hours per week do you spend in public transport on your commute to university?</string>
+    <string name="answer_public_transport_0">0 hours</string>
+    <string name="answer_public_transport_1">1 to 3 hours</string>
+    <string name="answer_public_transport_2">3 to 6 hours</string>
+    <string name="answer_public_transport_3">6 to 9 hours</string>
+    <string name="answer_public_transport_4">Over 9 hours</string>
 
-    <string name="question2">How many hours per week do you spend driving on your commute to university?</string>
-    <string name="answer6">0 hours</string>
-    <string name="answer7">1 to 3 hours</string>
-    <string name="answer8">3 to 6 hours</string>
-    <string name="answer9">6 to 9 hours</string>
-    <string name="answer10">Over 9 hours</string>
+    <string name="question_car">How many hours per week do you spend driving on your commute to university?</string>
+    <string name="answer_car_0">0 hours</string>
+    <string name="answer_car_1">1 to 3 hours</string>
+    <string name="answer_car_2">3 to 6 hours</string>
+    <string name="answer_car_3">6 to 9 hours</string>
+    <string name="answer_car_4">Over 9 hours</string>
 
-    <string name="question3">How far have you travelled by plane in the last year?</string>
-    <string name="answer11">Domestic(UK/Ireland)</string>
-    <string name="answer12">Up to 1000 miles</string>
-    <string name="answer13">Up to 2000 miles</string>
-    <string name="answer14">Up to 4000 miles</string>
-    <string name="answer15">Up to 6000 miles</string>
-    <string name="answer">Up to 12000 miles</string>
+    <string name="question_plane">How far have you travelled by plane in the last year?</string>
+    <string name="answer_plane_0">Domestic(UK/Ireland)</string>
+    <string name="answer_plane_1">Up to 1000 miles</string>
+    <string name="answer_plane_2">Up to 2000 miles</string>
+    <string name="answer_plane_3">Up to 4000 miles</string>
+    <string name="answer_plane_4">Up to 6000 miles</string>
+    <string name="answer_plane_5">Up to 12000 miles</string>
 
     <string name="next">Next</string>
+    <string name="back">Back</string>
 
     <string name="electricTitle">Electronic Devices</string>
-    <string name="question4">How many hours per week do you use the PCs at university?</string>
-    <string name="answer16">0 hours</string>
-    <string name="answer17">1 to 4 hours</string>
-    <string name="answer18">4 to 8 hours</string>
-    <string name="answer19">8 to 12 hours</string>
-    <string name="answer20">12 to 16 hours</string>
+    <string name="question_PC">How many hours per week do you use the PCs at university?</string>
+    <string name="answer_PC_0">0 hours</string>
+    <string name="answer_PC_1">1 to 4 hours</string>
+    <string name="answer_PC_2">4 to 8 hours</string>
+    <string name="answer_PC_3">8 to 12 hours</string>
+    <string name="answer_PC_4">12 to 16 hours</string>
 
-    <string name="question5">How many times per week do you use the printer at university?</string>
-    <string name="answer21">0 times</string>
-    <string name="answer22">1 to 3 times</string>
-    <string name="answer23">3 to 6 times</string>
-    <string name="answer24">6 to 9 times</string>
-    <string name="answer25">More than 9 times</string>
+    <string name="question_printer">How many times per week do you use the printer at university?</string>
+    <string name="answer_printer_0">0 times</string>
+    <string name="answer_printer_1">1 to 3 times</string>
+    <string name="answer_printer_2">3 to 6 times</string>
+    <string name="answer_printer_3">6 to 9 times</string>
+    <string name="answer_printer_4">More than 9 times</string>
 
-    <string name="question6">How many hours per week do you spend using your own laptop in university?</string>
-    <string name="answer26">0 hours</string>
-    <string name="answer27">1 to 4 hours</string>
-    <string name="answer28">4 to 8 hours</string>
-    <string name="answer29">8 to 12 hours</string>
-    <string name="answer30">12 to 16 hours</string>
+    <string name="question_laptop">How many hours per week do you spend using your own laptop in university?</string>
+    <string name="answer_laptop_0">0 hours</string>
+    <string name="answer_laptop_1">1 to 4 hours</string>
+    <string name="answer_laptop_2">4 to 8 hours</string>
+    <string name="answer_laptop_3">8 to 12 hours</string>
+    <string name="answer_laptop_4">12 to 16 hours</string>
 
     <string name="facilitiesTitle">On Campus</string>
-    <string name="question7">How many times per week do you visit the university library?</string>
-    <string name="answer31">0 times</string>
-    <string name="answer32">1 to 3 times</string>
-    <string name="answer33">3 to 6 times</string>
-    <string name="answer34">6 to 9 times</string>
-    <string name="answer35">More than 9 times</string>
+    <string name="question_library">How many times per week do you visit the university library?</string>
+    <string name="answer_library_0">0 times</string>
+    <string name="answer_library_1">1 to 3 times</string>
+    <string name="answer_library_2">3 to 6 times</string>
+    <string name="answer_library_3">6 to 9 times</string>
+    <string name="answer_library_4">More than 9 times</string>
 
-    <string name="question8">How many times per week do you visit the university gym?</string>
-    <string name="answer36">0 times</string>
-    <string name="answer37">1 to 3 times</string>
-    <string name="answer38">3 to 6 times</string>
-    <string name="answer39">6 to 9 times</string>
-    <string name="answer40">More than 9 times</string>
+    <string name="question_gym">How many times per week do you visit the university gym?</string>
+    <string name="answer_gym_0">0 times</string>
+    <string name="answer_gym_1">1 to 3 times</string>
+    <string name="answer_gym_2">3 to 6 times</string>
+    <string name="answer_gym_3">6 to 9 times</string>
+    <string name="answer_gym_4">More than 9 times</string>
 
-    <string name="question9">How many times per week do you use university labs or lecture rooms?</string>
-    <string name="answer41">0 times</string>
-    <string name="answer42">1 to 3 times</string>
-    <string name="answer43">3 to 6 times</string>
-    <string name="answer44">More than 6 times</string>
+    <string name="question_lecture">How many times per week do you use university labs or lecture rooms?</string>
+    <string name="answer_lecture_0">0 times</string>
+    <string name="answer_lecture_1">1 to 3 times</string>
+    <string name="answer_lecture_2">3 to 6 times</string>
+    <string name="answer_lecture_3">More than 6 times</string>
     <string name="results">Results</string>
 
     <string name="home">Home</string>
@@ -79,7 +80,12 @@
     <string name="type_plane">Air travel</string>
     <string name="type_computer">PC use</string>
     <string name="type_train">Rail travel</string>
-    <string name="start">Start</string>
-    <string name="back">Back</string>
+
+    <string name="type_lecture">Lectures</string>
+    <string name="type_gym">Gym use</string>
+    <string name="type_printer">Printing</string>
+    <string name="type_library">Library use</string>
+    <string name="type_laptop">Laptop use</string>
+
 
 </resources>

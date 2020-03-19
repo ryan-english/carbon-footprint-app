@@ -5,6 +5,8 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
+
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.BarData;
@@ -15,8 +17,8 @@ import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 
 import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 
 
 /*
@@ -25,10 +27,12 @@ Class for making charts with data from hashtables
 public class ChartBuilder {
 
     public static int[] colorset(){
-        return new int[]{R.color.colorPrimary, R.color.colorPrimaryDark, R.color.colorAccent};
+        return new int[]{R.color.pastelPink, R.color.pastelPurple, R.color.pastelBlue,
+                        R.color.pastelYellow, R.color.pastelOrange, R.color.pastelPeach,
+                        R.color.pastelGreen, R.color.pastelTurquoise, R.color.pastelTeal};
     }
 
-    public static PieChart buildPieChart(Hashtable<String,Float> ht, Context context){
+    public static PieChart buildPieChart(LinkedHashMap<String, Float> ht, Context context){
         PieData piedata = new PieData();
         ArrayList<PieEntry> stats = new ArrayList<>();
         Iterator<String> iterator = ht.keySet().iterator();
@@ -42,10 +46,12 @@ public class ChartBuilder {
 
         PieChart chart = new PieChart(context);
         chart.setData(piedata);
+        chart.setHoleColor(212121);
+        chart.getLegend().setTextColor(ContextCompat.getColor(context,R.color.white));
         return(chart);
     }
 
-    public static BarChart buildBarChart(Hashtable<String,Float> ht, Context context){
+    public static BarChart buildBarChart(LinkedHashMap<String, Float> ht, Context context){
         BarData bdata = new BarData();
         Iterator<String> iterator = ht.keySet().iterator();
         int i;
@@ -63,10 +69,14 @@ public class ChartBuilder {
 
         BarChart chart = new BarChart(context);
         chart.setData(bdata);
+        chart.getXAxis().setDrawLabels(false);
+        chart.getAxisLeft().setTextColor(ContextCompat.getColor(context,R.color.white));
+        chart.getAxisRight().setDrawLabels(false);
+        chart.getLegend().setTextColor((ContextCompat.getColor(context,R.color.white)));
         return(chart);
     }
 
-    public static TableLayout buildTable(Hashtable<String,Float> ht, Context context){
+    public static TableLayout buildTable(LinkedHashMap<String, Float> ht, Context context){
         TableLayout table = new TableLayout(context);
         Iterator<String> iterator = ht.keySet().iterator();
         while (iterator.hasNext()) {
@@ -76,8 +86,10 @@ public class ChartBuilder {
             TextView label = new TextView(context);
             TextView number = new TextView(context);
             label.setText(getStringResource(key, context));
+            label.setTextColor((ContextCompat.getColor(context,R.color.white)));
 
             number.setText(value.toString());
+            number.setTextColor(ContextCompat.getColor(context,R.color.white));
             row.addView(label);
             row.addView(number);
             table.addView(row);

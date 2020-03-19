@@ -2,15 +2,16 @@ package com.example.carbonfootprint;
 
 
 import java.util.Hashtable;
+import java.util.LinkedHashMap;
 
 public class EmissionCalculatorTable {
     private static EmissionCalculatorTable instance = new EmissionCalculatorTable();
-    static private Hashtable<String,Float> emissiontable;
+    static private LinkedHashMap<String,Float> emissiontable;
     static private Hashtable<String,Float> conversionTable;
 
 
     private EmissionCalculatorTable() {
-    emissiontable = new Hashtable<String,Float>();
+    emissiontable = new LinkedHashMap<String,Float>();
     conversionTable = new Hashtable<String,Float>();
     }
 
@@ -18,10 +19,16 @@ public class EmissionCalculatorTable {
     Records the multiplication conversion factors and identifiers for different types of emissions.
      */
     private static void conversionTableValues(){
-        conversionTable.put("type_car",1.0f);
-        conversionTable.put("type_plane",2.0f);
-        conversionTable.put("type_computer",1.5f);
         conversionTable.put("type_train",0.1f);
+        conversionTable.put("type_car",1.0f);
+        conversionTable.put("type_plane",0.02f);
+        conversionTable.put("type_computer",1.5f);
+        conversionTable.put("type_laptop",0.1f);
+        conversionTable.put("type_printer",0.1f);
+        conversionTable.put("type_gym",0.8f);
+        conversionTable.put("type_library",0.1f);
+        conversionTable.put("type_lecture",0.1f);
+
     }
 
     public static void initialise(){
@@ -30,7 +37,7 @@ public class EmissionCalculatorTable {
         conversionTableValues();
     }
 
-    public static Hashtable getEmissionTable(){
+    public static LinkedHashMap getEmissionTable(){
        return emissiontable;}
 
     /*
@@ -42,4 +49,11 @@ public class EmissionCalculatorTable {
         Float value = factor*amount;
         emissiontable.put(type,value);
     }
+
+    public static void removeLast() {
+        String[] keys = emissiontable.keySet().toArray(new String[emissiontable.size()]);
+        if(keys.length>0){emissiontable.remove(keys[keys.length -1]);}
+        }
+
 }
+
