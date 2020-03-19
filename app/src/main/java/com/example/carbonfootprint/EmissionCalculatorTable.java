@@ -51,8 +51,8 @@ public class EmissionCalculatorTable {
     }
 
     public static void removeLast() {
-            String lastkey = String.valueOf(emissiontable.entrySet().toArray()[emissiontable.size() - 1]);
-            emissiontable.remove(lastkey);
+        String[] keys = emissiontable.keySet().toArray(new String[emissiontable.size()]);
+        if(keys.length>0){emissiontable.remove(keys[keys.length -1]);}
         }
 
 }
