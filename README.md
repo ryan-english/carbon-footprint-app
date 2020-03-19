@@ -1,1 +1,1 @@
-# carbon-footprint-app
+# Carbon-Footprint
