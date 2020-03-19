@@ -67,12 +67,13 @@ public class UserInput extends AppCompatActivity {
         }
 
         for(RadioGroup r : questions){
-         String category = (String) r.getTag();
-         RadioButton b = findViewById(r.getCheckedRadioButtonId());
-         String n = (String) b.getTag();
-         Float answer = Float.parseFloat(n);
-        EmissionCalculatorTable.calculateAndRecord(category,answer);
-        }
+            if(r.getCheckedRadioButtonId() != -1) {
+                String category = (String) r.getTag();
+                RadioButton b = findViewById(r.getCheckedRadioButtonId());
+                String n = (String) b.getTag();
+                Float answer = Float.parseFloat(n);
+                EmissionCalculatorTable.calculateAndRecord(category, answer);
+            }}
 
         stage++;
         Intent next;
