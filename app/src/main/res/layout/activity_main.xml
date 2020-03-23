@@ -25,23 +25,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <LinearLayout
+        android:id="@+id/textLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/container"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appTitle">
+
     <TextView
         android:id="@+id/appInfo"
-        android:layout_width="281dp"
-        android:layout_height="93dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginLeft="65dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="66dp"
-        android:layout_marginRight="66dp"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/appInfo"
         android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:background="@drawable/container"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appTitle" />
+        android:textSize="18sp" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/buttonStart"
@@ -57,28 +62,35 @@
         android:text="@string/start"
         android:textColor="@color/pastelGreen"
         android:textSize="24sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appInfo" />
+        app:layout_constraintTop_toBottomOf="@+id/textLayout" />
+
+    <LinearLayout
+        android:id="@+id/text2Layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/container"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStart">
 
     <TextView
         android:id="@+id/tipsInfo"
-        android:layout_width="283dp"
-        android:layout_height="102dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginLeft="65dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="66dp"
-        android:layout_marginRight="66dp"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/tipsInfo"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:background="@drawable/container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonStart" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/button"
@@ -86,17 +98,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginLeft="160dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="160dp"
         android:layout_marginRight="160dp"
         android:background="@drawable/button_border_pink"
         android:onClick="openTips"
         android:text="@string/tips"
         android:textColor="@color/pastelPink"
-        android:textSize="14sp"
-        android:textStyle="bold"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tipsInfo" />
+        app:layout_constraintTop_toBottomOf="@+id/text2Layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
