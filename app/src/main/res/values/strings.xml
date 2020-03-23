@@ -101,6 +101,7 @@
     <string name="alwaysTitle">Always</string>
     <string name="always_text_into_0">Think about your daily activities and if you can do them more efficiently or use less electricity</string>
     <string name="always_text_into_1">Don\'t forget that no one is perfect so don\'t give up when you feel like your carbon footprint is too high</string>
+    <string name="start">Start</string>
 
 
 </resources>

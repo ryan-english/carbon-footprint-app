@@ -8,15 +8,6 @@
     android:background="#212121">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="110dp"
-        android:layout_marginLeft="110dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
         android:id="@+id/textTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -110,6 +101,21 @@
             android:backgroundTint="@color/pastelGreen"
             android:onClick="backToStart"
             android:text="@string/home" />
+
+        <Button
+            android:id="@+id/tipButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_toStartOf="@+id/nextButton"
+            android:layout_toLeftOf="@+id/nextButton"
+            android:layout_toEndOf="@+id/backButton"
+            android:layout_toRightOf="@+id/backButton"
+            android:onClick="backTips"
+            android:text="@string/tips" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
