@@ -90,6 +90,7 @@
         android:layout_marginEnd="160dp"
         android:layout_marginRight="160dp"
         android:background="@drawable/button_border_peach"
+        android:onClick="openTips"
         android:text="@string/tips"
         android:textColor="@color/pastelPeach"
         android:textSize="14sp"

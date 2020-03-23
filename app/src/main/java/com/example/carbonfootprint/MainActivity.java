@@ -22,4 +22,10 @@ public class MainActivity extends AppCompatActivity {
         Intent survey = new Intent(this, UserInput.class);
         startActivity(survey);
     }
+
+    public void openTips (View view)
+    {
+        Intent tips = new Intent(this, Education.class);
+        startActivity(tips);
+    }
 }
