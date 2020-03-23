@@ -86,8 +86,10 @@
     <string name="type_printer">Printing</string>
     <string name="type_library">Library use</string>
     <string name="type_laptop">Laptop use</string>
+
     <string name="tipsInfo">Would you like to learn more about how to reduce your carbon footprint? Click below and find out how you can save the planet!</string>
     <string name="tips">Tips</string>
+
     <string name="tips_headline">10 tips to reduce your carbon footprint</string>
     <string name="travel_info_text_0">Switching from cars to buses/trains is a great way to reduce your carbon footprint</string>
     <string name="travel_info_text_1">If you have to use a car to get to the university ask your neighbours if they need a ride</string>
@@ -95,12 +97,15 @@
     <string name="campus_info_text_0">Natural light is 100% better for your eyes so switch off that light</string>
     <string name="campus_info_text_1">Bring your own water bottle and not only there will be less plastic but you also cut down all the production and transportation carbon</string>
     <string name="campus_info_text_2">Use the stairs instead of an elevator and you do not need the gym anymore</string>
+
     <string name="devices">Devices</string>
     <string name="dev_text_info_0">If the weather is good run outside. You will save 5 kg of greenhouse gases</string>
     <string name="dev_text_info_1">Wake up early and study during the day. You can save a lot of energy by not studying at night</string>
+
     <string name="alwaysTitle">Always</string>
     <string name="always_text_into_0">Think about your daily activities and if you can do them more efficiently or using less electricity</string>
     <string name="always_text_into_1">Don\'t forget that no one is perfect so don\'t give up when you feel like your carbon footprint is too high</string>
+
     <string name="start">Start</string>
     <string name="resultsButton">Results</string>
 

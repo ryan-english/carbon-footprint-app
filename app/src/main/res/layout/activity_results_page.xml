@@ -7,6 +7,17 @@
     tools:context=".ResultsPage"
     android:background="#212121">
 
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
     <TextView
         android:id="@+id/textTotal"
         android:layout_width="wrap_content"
@@ -52,37 +63,82 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:id="@+id/layoutInstructions"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="55dp"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/textInstructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:text="Swipe left to see your results in more detail..."/>
+
+        </LinearLayout>
+
     <LinearLayout
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+        app:layout_constraintTop_toBottomOf="@id/layoutInstructions"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp">
+        android:layout_marginLeft="55dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/container"
+        android:paddingLeft="10dp">
 
     <TextView
         android:id="@+id/textAverage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"
         android:textSize="18sp"
-        android:textColor="@color/pastelGreen"
-        android:text="UK average weekly CO2 emissions: 190kg"/>
+        android:textStyle="italic"
+        android:textColor="#ffffff"
+        android:text="UK average weekly CO2 emissions:"/>
+
+        <TextView
+            android:id="@+id/textAverageFigure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:textColor="@color/pastelGreen"
+            android:text="190kg"/>
 
     <TextView
         android:id="@+id/textGoal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:textSize="18sp"
-        android:textColor="@color/pastelGreen"
-        android:text="Your weekly CO2 emissions goal should be: 50kg"/>
+        android:textStyle="italic"
+        android:textColor="#ffffff"
+        android:text="Your weekly CO2 emissions goal should be:"/>
 
+        <TextView
+            android:id="@+id/textGoalFigure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:textColor="@color/pastelGreen"
+            android:text="50kg"/>
     </LinearLayout>
 
     <RelativeLayout
@@ -92,7 +148,7 @@
         android:layout_marginStart="55dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="55dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="30dp"
         android:orientation="horizontal">
 
         <Button
@@ -120,6 +176,8 @@
             android:text="@string/tips" />
     </RelativeLayout>
 
+    </LinearLayout>
+    </ScrollView>
     </LinearLayout>
     </ScrollView>
 
