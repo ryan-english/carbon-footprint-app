@@ -62,21 +62,26 @@
 
             <Button
                 android:id="@+id/nextButton"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/pastelGreen"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/small_green_button"
+                android:textColor="@color/pastelGreen"
                 android:onClick="toNext"
                 android:text="@string/next"
                 android:layout_alignParentRight="true"/>
 
             <Button
                 android:id="@+id/backButton"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:layout_alignParentLeft="true"
-                android:backgroundTint="@color/pastelGreen"
-                android:onClick="backHome"
-                android:text="@string/back" />
+                android:background="@drawable/small_green_button"
+                android:textColor="@color/pastelGreen"
+                android:onClick="back"
+                android:text="@string/back"
+                />
 
         </RelativeLayout>
 
