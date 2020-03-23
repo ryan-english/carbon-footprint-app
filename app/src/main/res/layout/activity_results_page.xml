@@ -23,11 +23,11 @@
         android:id="@+id/horizontalScrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="50dp"
         android:fillViewport="true"
-        app:layout_constraintBottom_toTopOf="@+id/buttonLayout"
+        app:layout_constraintBottom_toTopOf="@+id/resultsSummary"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textTotal"
         app:layout_constraintVertical_bias="0.49">
 
         <LinearLayout
@@ -38,6 +38,19 @@
             android:orientation="horizontal" />
 
     </HorizontalScrollView>
+
+    <ScrollView
+        android:id="@+id/resultsSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="310dp"
@@ -80,42 +93,34 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="55dp"
         android:layout_marginBottom="15dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <Button
-            android:id="@+id/backButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:backgroundTint="@color/pastelGreen"
-            android:onClick="backFacility"
-            android:text="@string/back" />
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/nextButton"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
             android:layout_alignParentRight="true"
-            android:backgroundTint="@color/pastelGreen"
+            android:background="@drawable/small_green_button"
+            android:textColor="@color/pastelGreen"
             android:onClick="backToStart"
+            android:textSize="14dp"
             android:text="@string/home" />
 
         <Button
             android:id="@+id/tipButton"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="23dp"
-            android:layout_marginLeft="23dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_toStartOf="@+id/nextButton"
-            android:layout_toLeftOf="@+id/nextButton"
-            android:layout_toEndOf="@+id/backButton"
-            android:layout_toRightOf="@+id/backButton"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/small_pink_button"
+            android:textColor="@color/pastelPink"
+            android:textSize="14dp"
             android:onClick="backTips"
             android:text="@string/tips" />
     </RelativeLayout>
+
+    </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -272,6 +272,41 @@
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="55dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/small_green_button"
+            android:textColor="@color/pastelGreen"
+            android:onClick="toResults"
+            android:text="@string/resultsButton"
+            android:textSize="12dp"
+            android:layout_alignParentRight="true"/>
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/small_green_button"
+            android:textColor="@color/pastelGreen"
+            android:onClick="backToStart"
+            android:text="@string/home"
+            />
+
+    </RelativeLayout>
+
     </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

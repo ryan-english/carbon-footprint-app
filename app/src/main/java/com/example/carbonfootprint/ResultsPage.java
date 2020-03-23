@@ -48,12 +48,6 @@ public class ResultsPage extends AppCompatActivity {
         startActivity(back);
     }
 
-    public void backFacility(View view)
-    {
-        Intent back = new Intent(this, MainActivity.class);
-        startActivity(back);
-    }
-
     public void backTips (View view)
     {
         Intent tips = new Intent(this, Education.class);
