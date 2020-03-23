@@ -48,10 +48,10 @@ public class ResultsPage extends AppCompatActivity {
         startActivity(back);
     }
 
-    public void backFacility(View view)
+    public void backTips (View view)
     {
-        Intent back = new Intent(this, MainActivity.class);
-        startActivity(back);
+        Intent tips = new Intent(this, Education.class);
+        startActivity(tips);
     }
 
     private void addPie(LinkedHashMap ht, int screenwidth, int screenheight) {
@@ -86,6 +86,6 @@ public class ResultsPage extends AppCompatActivity {
         }
         n = Math.round(n);
         TextView label = findViewById(R.id.textTotal);
-        label.setText("Total CO2 Emissions: " +n+ "kg");
+        label.setText("Total weekly CO2 Emissions: " +n+ "kg");
     }
 }
