@@ -53,7 +53,7 @@
         android:layout_marginRight="156dp"
         android:background="@drawable/button_border"
         android:onClick="openSurvey"
-        android:text="Start"
+        android:text="@string/start"
         android:textColor="@color/pastelGreen"
         android:textSize="24sp"
         android:textStyle="bold"
