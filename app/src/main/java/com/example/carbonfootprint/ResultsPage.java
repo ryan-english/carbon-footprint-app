@@ -86,6 +86,6 @@ public class ResultsPage extends AppCompatActivity {
         }
         n = Math.round(n);
         TextView label = findViewById(R.id.textTotal);
-        label.setText("Total CO2 Emissions: " +n+ "kg");
+        label.setText("Total weekly CO2 Emissions: " +n+ "kg");
     }
 }
