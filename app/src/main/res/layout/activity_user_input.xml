@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:backgroundTint="@color/pastelGreen"
-                android:onClick="backHome"
+                android:onClick="back"
                 android:text="@string/back" />
 
         </RelativeLayout>
