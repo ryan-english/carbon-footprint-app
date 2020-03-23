@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void openTips (View view)
     {
-        Intent tips = new Intent(this, UserInput.class);
+        Intent tips = new Intent(this, Education.class);
         startActivity(tips);
     }
 }
