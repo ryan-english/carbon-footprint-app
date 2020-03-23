@@ -23,11 +23,13 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
+        android:textColor="@color/pastelGreen"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textSize="24sp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -43,7 +45,41 @@
             android:layout_height="match_parent"
             android:measureWithLargestChild="true"
             android:orientation="horizontal" />
+
     </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp">
+
+    <TextView
+        android:id="@+id/textAverage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"
+        android:textColor="@color/pastelGreen"
+        android:text="UK average weekly CO2 emissions: 190kg"/>
+
+    <TextView
+        android:id="@+id/textGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"
+        android:textColor="@color/pastelGreen"
+        android:text="Your weekly CO2 emissions goal should be: 50kg"/>
+
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/buttonLayout"
@@ -62,7 +98,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:backgroundTint="@color/colorAccent"
+            android:backgroundTint="@color/pastelGreen"
             android:onClick="backFacility"
             android:text="@string/back" />
 
@@ -71,7 +107,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:background="@color/colorAccent"
+            android:backgroundTint="@color/pastelGreen"
             android:onClick="backToStart"
             android:text="@string/home" />
     </RelativeLayout>

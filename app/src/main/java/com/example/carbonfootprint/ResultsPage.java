@@ -12,8 +12,8 @@ import android.widget.TextView;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
 
-import java.util.Hashtable;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 
 
 public class ResultsPage extends AppCompatActivity {
@@ -27,14 +27,14 @@ public class ResultsPage extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int screenheight = displayMetrics.heightPixels;
         int screenwidth = displayMetrics.widthPixels;
-
+/*
         EmissionCalculatorTable.initialise();
         EmissionCalculatorTable.calculateAndRecord("type_car",100.0f);
         EmissionCalculatorTable.calculateAndRecord("type_plane", 40.0f);
         EmissionCalculatorTable.calculateAndRecord("type_computer",400.0f);
         EmissionCalculatorTable.calculateAndRecord("type_train",300.0f);
-
-        Hashtable emissionStats = EmissionCalculatorTable.getEmissionTable();
+*/
+        LinkedHashMap emissionStats = EmissionCalculatorTable.getEmissionTable();
 
         addPie(emissionStats, screenwidth, screenheight);
         addBar(emissionStats, screenwidth, screenheight);
@@ -50,11 +50,11 @@ public class ResultsPage extends AppCompatActivity {
 
     public void backFacility(View view)
     {
-        Intent back = new Intent(this, Input3.class);
+        Intent back = new Intent(this, MainActivity.class);
         startActivity(back);
     }
 
-    private void addPie(Hashtable ht, int screenwidth, int screenheight) {
+    private void addPie(LinkedHashMap ht, int screenwidth, int screenheight) {
         PieChart pie = ChartBuilder.buildPieChart(ht,this);
         pie.setMinimumWidth(screenwidth);
         pie.setMinimumHeight(screenheight / 2);
@@ -63,7 +63,7 @@ public class ResultsPage extends AppCompatActivity {
         container.addView(pie);
     }
 
-    private void addBar(Hashtable ht, int screenwidth, int screenheight) {
+    private void addBar(LinkedHashMap ht, int screenwidth, int screenheight) {
         BarChart bar = ChartBuilder.buildBarChart(ht,this);
         bar.setMinimumWidth(screenwidth);
         bar.setMinimumHeight(screenheight / 2);
@@ -71,12 +71,12 @@ public class ResultsPage extends AppCompatActivity {
         container.addView(bar);
     }
 
-    private void addTable(Hashtable<String, Float> ht, int screenwidth, int screenheight) {
+    private void addTable(LinkedHashMap<String, Float> ht, int screenwidth, int screenheight) {
         LinearLayout container = findViewById(R.id.layout);
         container.addView(ChartBuilder.buildTable(ht,this));
     }
 
-    private void addTotal(Hashtable<String, Float> ht) {
+    private void addTotal(LinkedHashMap<String, Float> ht) {
         double n = 0;
         Iterator<String> iterator = ht.keySet().iterator();
         while (iterator.hasNext()) {
@@ -84,6 +84,7 @@ public class ResultsPage extends AppCompatActivity {
             Float value = ht.get(key);
             n = n + value;
         }
+        n = Math.round(n);
         TextView label = findViewById(R.id.textTotal);
         label.setText("Total CO2 Emissions: " +n+ "kg");
     }
