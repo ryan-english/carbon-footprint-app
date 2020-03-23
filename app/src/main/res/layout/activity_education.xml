@@ -8,9 +8,22 @@
     tools:context=".Education">
 
     <TextView
+        android:id="@+id/textView9"
+        android:layout_width="159dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/travel_info_text_2"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView8" />
+
+    <TextView
         android:id="@+id/textView2"
-        android:layout_width="335dp"
-        android:layout_height="116dp"
+        android:layout_width="332dp"
+        android:layout_height="82dp"
         android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
         android:layout_marginTop="26dp"
@@ -29,35 +42,75 @@
     <TextView
         android:id="@+id/textView4"
         android:layout_width="159dp"
-        android:layout_height="175dp"
+        android:layout_height="73dp"
         android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/textView5"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/travel_info_text_0"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
         android:id="@+id/textView5"
+        android:layout_width="162dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginLeft="212dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/campus_info_text_0"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView7" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="168dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginLeft="208dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/campus_info_text_1"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView5" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="173dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginLeft="208dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/campus_info_text_2"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView10" />
+
+    <TextView
+        android:id="@+id/textView8"
         android:layout_width="159dp"
-        android:layout_height="175dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        android:layout_height="71dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/travel_info_text_1"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView4" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="159dp"
-        android:layout_height="34dp"
+        android:layout_height="43dp"
         android:layout_marginStart="35dp"
         android:layout_marginLeft="35dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="23dp"
         android:gravity="center"
         android:text="@string/travelTitle"
         android:textAllCaps="true"
@@ -68,16 +121,32 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/textView12"
         android:layout_width="159dp"
-        android:layout_height="34dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="350dp"
+        android:gravity="center"
+        android:text="@string/facilitiesTitle"
+        android:textAllCaps="true"
+        android:textColor="@color/pastelOrange"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="162dp"
+        android:layout_height="43dp"
         android:layout_marginStart="17dp"
         android:layout_marginLeft="17dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="23dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
         android:gravity="center"
-        android:text="@string/facilitiesTitle"
+        android:text="@string/electricTitle"
         android:textAllCaps="true"
         android:textColor="@color/pastelTeal"
         android:textSize="18sp"
