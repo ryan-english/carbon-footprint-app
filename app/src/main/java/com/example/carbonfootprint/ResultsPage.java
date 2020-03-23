@@ -54,6 +54,12 @@ public class ResultsPage extends AppCompatActivity {
         startActivity(back);
     }
 
+    public void backTips (View view)
+    {
+        Intent tips = new Intent(this, Education.class);
+        startActivity(tips);
+    }
+
     private void addPie(LinkedHashMap ht, int screenwidth, int screenheight) {
         PieChart pie = ChartBuilder.buildPieChart(ht,this);
         pie.setMinimumWidth(screenwidth);
