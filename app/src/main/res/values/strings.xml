@@ -86,6 +86,7 @@
     <string name="type_printer">Printing</string>
     <string name="type_library">Library use</string>
     <string name="type_laptop">Laptop use</string>
+    <string name="tipsInfo">Would you like to learn more about how to reduce your carbon footprint? Click below and find out how you can save the planet!</string>
 
 
 </resources>
