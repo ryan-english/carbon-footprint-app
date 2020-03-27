@@ -1,10 +1,13 @@
 package com.example.carbonfootprint;
 
 import android.content.Context;
+import android.os.Build;
+import android.view.Gravity;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.core.content.ContextCompat;
 
 import com.github.mikephil.charting.charts.BarChart;
@@ -76,20 +79,34 @@ public class ChartBuilder {
         return(chart);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public static TableLayout buildTable(LinkedHashMap<String, Float> ht, Context context){
         TableLayout table = new TableLayout(context);
+
         Iterator<String> iterator = ht.keySet().iterator();
         while (iterator.hasNext()) {
             String key = iterator.next();
             Float value = ht.get(key);
+
             TableRow row = new TableRow(context);
             TextView label = new TextView(context);
             TextView number = new TextView(context);
+            TextView title = new TextView(context);
+
             label.setText(getStringResource(key, context));
             label.setTextColor((ContextCompat.getColor(context,R.color.white)));
+            label.setBackground(ContextCompat.getDrawable(context,R.drawable.table_border));
+            label.setGravity(Gravity.CENTER);
 
             number.setText(value.toString());
             number.setTextColor(ContextCompat.getColor(context,R.color.white));
+            number.setBackground(ContextCompat.getDrawable(context,R.drawable.table_border));
+            number.setGravity(Gravity.CENTER);
+
+            title.setText("Activity");
+            title.setTextColor(ContextCompat.getColor(context,R.color.white));
+            title.setBackground(ContextCompat.getDrawable(context,R.drawable.table_border));
+
             row.addView(label);
             row.addView(number);
             table.addView(row);
