@@ -108,6 +108,7 @@
 
     <string name="start">Start</string>
     <string name="resultsButton">Results</string>
+    <string name="shareTitle">share</string>
 
 
 </resources>
