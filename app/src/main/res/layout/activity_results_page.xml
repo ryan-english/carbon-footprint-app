@@ -171,7 +171,7 @@
             android:layout_marginRight="122dp"
             android:background="@drawable/button_border_blue"
             android:onClick="sendResults"
-            android:text="share"
+            android:text="@string/shareTitle"
             android:textColor="@color/pastelBlue"
             android:textSize="14dp" />
 
