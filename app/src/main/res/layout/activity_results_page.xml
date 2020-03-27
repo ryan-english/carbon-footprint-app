@@ -18,19 +18,19 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:textColor="@color/pastelGreen"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/resultsTitle"
+            android:textColor="@color/pastelGreen"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <HorizontalScrollView
+        <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
         android:fillViewport="true"
         app:layout_constraintBottom_toTopOf="@+id/resultsSummary"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/textTotal"
+        app:layout_constraintTop_toTopOf="@id/textResult"
         app:layout_constraintVertical_bias="0.49">
 
         <LinearLayout
@@ -46,7 +46,63 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:measureWithLargestChild="true"
-            android:orientation="horizontal" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/pastelGreen"
+                android:textSize="36sp"
+                android:background="@drawable/results_border"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"/>
+
+            <TableLayout
+                android:id="@+id/emissionsTable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minWidth="300dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView android:text="Activity"
+                        android:layout_width="30dp"
+                        android:layout_column="0"
+                        android:layout_weight="1"
+                        android:textColor="#ffffff"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:textStyle="italic"
+                        android:background="@drawable/table_border">
+                    </TextView>
+
+                    <TextView android:text="Emissions(kg)"
+                        android:layout_width="30dp"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:textColor="#ffffff"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:textStyle="italic"
+                        android:background="@drawable/table_border">
+                    </TextView>
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
 
     </HorizontalScrollView>
 
