@@ -1,12 +1,15 @@
 package com.example.carbonfootprint;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TableLayout;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.BarChart;
@@ -18,6 +21,7 @@ import java.util.LinkedHashMap;
 
 public class ResultsPage extends AppCompatActivity {
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,8 +75,9 @@ public class ResultsPage extends AppCompatActivity {
         container.addView(bar);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     private void addTable(LinkedHashMap<String, Float> ht, int screenwidth, int screenheight) {
-        LinearLayout container = findViewById(R.id.layout);
+        TableLayout container = findViewById(R.id.emissionsTable);
         container.addView(ChartBuilder.buildTable(ht,this));
     }
 
@@ -86,6 +91,6 @@ public class ResultsPage extends AppCompatActivity {
         }
         n = Math.round(n);
         TextView label = findViewById(R.id.textTotal);
-        label.setText("Total weekly CO2 Emissions: " +n+ "kg");
+        label.setText(n + "kg");
     }
 }

@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="@string/resultsTitle"
+            android:text="Your Weekly C02 Emissions:"
             android:textColor="@color/pastelGreen"
             android:textSize="24sp"
             android:layout_gravity="center"
@@ -164,7 +164,9 @@
         android:textSize="18sp"
         android:textStyle="italic"
         android:textColor="#ffffff"
-        android:text="UK average weekly CO2 emissions:"/>
+        android:text="@string/textAverage"
+        android:layout_gravity="center"
+        android:gravity="center"/>
 
         <TextView
             android:id="@+id/textAverageFigure"
@@ -174,7 +176,7 @@
             android:layout_gravity="center"
             android:textSize="24sp"
             android:textColor="@color/pastelGreen"
-            android:text="190kg"/>
+            android:text="190kg" />
 
     <TextView
         android:id="@+id/textGoal"
@@ -184,7 +186,9 @@
         android:textSize="18sp"
         android:textStyle="italic"
         android:textColor="#ffffff"
-        android:text="Your weekly CO2 emissions goal should be:"/>
+        android:text="@string/textGoal"
+        android:layout_gravity="center"
+        android:gravity="center"/>
 
         <TextView
             android:id="@+id/textGoalFigure"
@@ -226,8 +230,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="122dp"
             android:background="@drawable/button_border_blue"
-            android:onClick="sendResults"
-            android:text="@string/shareTitle"
+            android:text="Share"
             android:textColor="@color/pastelBlue"
             android:textSize="14dp" />
 
