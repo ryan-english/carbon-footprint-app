@@ -4,6 +4,7 @@
 
     <application
         android:allowBackup="true"
+        android:label="CARBN"
         android:icon="@drawable/icon_footprint"
         android:roundIcon="@drawable/icon_footprint"
         android:supportsRtl="true"
