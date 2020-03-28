@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
@@ -20,6 +21,8 @@ import java.util.LinkedHashMap;
 
 
 public class ResultsPage extends AppCompatActivity {
+    private TextView label;
+    private TextView top;
     private double n;
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -28,6 +31,8 @@ public class ResultsPage extends AppCompatActivity {
         setTheme(R.style.HiddenTitleTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results_page);
+        label = findViewById(R.id.textTotal);
+        top = findViewById(R.id.textResult);
 
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
@@ -91,20 +96,32 @@ public class ResultsPage extends AppCompatActivity {
             n = n + value;
         }
         n = Math.round(n);
-        TextView label = findViewById(R.id.textTotal);
+        top.setText("Your Weekly C02 Emissions:");
         label.setText(n + "kg");
     }
 
     public void sendResults(View view){
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        TextView label = findViewById(R.id.textTotal);
         sendIntent.putExtra(Intent.EXTRA_TEXT, "My total weekly CO2 emissions is " + n + "kg. Try the CARBN app to find out yours!");
         sendIntent.setType("text/plain");
 
         Intent shareIntent = Intent.createChooser(sendIntent, null);
         startActivity(shareIntent);
     }
+    public void weeklyResults (View v){
+        top.setText("Your Weekly C02 Emissions:");
+        label.setText(n + " kg");
+    }
 
-
+    public void monthlyResults (View v){
+        double m = n * 4;
+        top.setText("Your Monthly C02 Emissions:");
+        label.setText(m + " kg");
+    }
+    public void annualResults (View v){
+        double o = n * 45;
+        top.setText("Your Annual C02 Emissions:");
+        label.setText(o + " kg");
+    }
 }

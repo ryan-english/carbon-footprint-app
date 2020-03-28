@@ -111,6 +111,9 @@
     <string name="resultsButton">Results</string>
     <string name="textGoal">Your weekly CO2 emissions goal should be:</string>
     <string name="textAverage">UK average weekly CO2 emissions:</string>
+    <string name="weeklyButton">weekly</string>
+    <string name="monthlyTitle">monthly</string>
+    <string name="annualTitle">annual</string>
 
 
 </resources>
