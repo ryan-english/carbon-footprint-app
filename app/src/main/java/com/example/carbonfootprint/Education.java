@@ -8,9 +8,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.Layout;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Education extends AppCompatActivity {
+
+    public static Button resultButton;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -18,6 +21,8 @@ public class Education extends AppCompatActivity {
         setTheme(R.style.HiddenTitleTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_education);
+
+        resultButton = findViewById(R.id.resultButton);
     }
 
     public void backToStart(View view)

@@ -99,7 +99,7 @@ public class ResultsPage extends AppCompatActivity {
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
         TextView label = findViewById(R.id.textTotal);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, "My total weekly CO2 emissions is " + n + "kg. Try CARBN app and find out yours!");
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "My total weekly CO2 emissions is " + n + "kg. Try the CARBN app to find out yours!");
         sendIntent.setType("text/plain");
 
         Intent shareIntent = Intent.createChooser(sendIntent, null);

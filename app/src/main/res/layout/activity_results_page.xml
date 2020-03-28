@@ -138,6 +138,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 android:textSize="18sp"
+                app:fontFamily="@font/source_sans_pro"
                 android:textColor="#ffffff"
                 android:text="Swipe left to see your results in more detail..."/>
 
@@ -153,7 +154,7 @@
         android:layout_marginLeft="55dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/container"
-        android:paddingLeft="10dp">
+        android:padding="10dp">
 
     <TextView
         android:id="@+id/textAverage"
@@ -162,6 +163,7 @@
         android:layout_marginBottom="25dp"
         android:layout_marginTop="15dp"
         android:textSize="18sp"
+        app:fontFamily="@font/source_sans_pro"
         android:textStyle="italic"
         android:textColor="#ffffff"
         android:text="@string/textAverage"
@@ -175,20 +177,22 @@
             android:layout_marginBottom="25dp"
             android:layout_gravity="center"
             android:textSize="24sp"
+            app:fontFamily="@font/source_sans_pro"
             android:textColor="@color/pastelGreen"
             android:text="190kg" />
 
-    <TextView
-        android:id="@+id/textGoal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        android:textColor="#ffffff"
-        android:text="@string/textGoal"
-        android:layout_gravity="center"
-        android:gravity="center"/>
+        <TextView
+            android:id="@+id/textGoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:text="@string/textGoal"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:fontFamily="@font/source_sans_pro" />
 
         <TextView
             android:id="@+id/textGoalFigure"
@@ -197,6 +201,7 @@
             android:layout_marginBottom="15dp"
             android:layout_gravity="center"
             android:textSize="24sp"
+            app:fontFamily="@font/source_sans_pro"
             android:textColor="@color/pastelGreen"
             android:text="50kg"/>
     </LinearLayout>
