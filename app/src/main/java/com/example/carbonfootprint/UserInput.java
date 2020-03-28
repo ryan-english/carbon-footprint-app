@@ -21,6 +21,7 @@ public class UserInput extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.HiddenTitleTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_input);
         LinearLayout layout = findViewById(R.id.scrollLayout);

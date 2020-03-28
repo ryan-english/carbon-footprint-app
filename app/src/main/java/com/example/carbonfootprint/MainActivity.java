@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.HiddenTitleTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         EmissionCalculatorTable.initialise();

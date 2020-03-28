@@ -25,6 +25,7 @@ public class ResultsPage extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.HiddenTitleTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results_page);
 
