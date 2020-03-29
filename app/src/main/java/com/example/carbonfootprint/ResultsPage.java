@@ -120,7 +120,7 @@ public class ResultsPage extends AppCompatActivity {
         label.setText(m + " kg");
     }
     public void annualResults (View v){
-        double o = n * 45;
+        double o = n * 52;
         top.setText("Your Annual C02 Emissions:");
         label.setText(o + " kg");
     }
