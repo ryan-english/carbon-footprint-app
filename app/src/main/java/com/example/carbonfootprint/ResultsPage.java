@@ -23,6 +23,10 @@ import java.util.LinkedHashMap;
 public class ResultsPage extends AppCompatActivity {
     private TextView label;
     private TextView top;
+    private TextView ukAvgText;
+    private TextView ukAvgFig;
+    private TextView goalText;
+    private TextView goalFig;
     private double n;
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -33,6 +37,10 @@ public class ResultsPage extends AppCompatActivity {
         setContentView(R.layout.activity_results_page);
         label = findViewById(R.id.textTotal);
         top = findViewById(R.id.textResult);
+        ukAvgFig = findViewById(R.id.textAverageFigure);
+        ukAvgText = findViewById(R.id.textAverage);
+        goalText = findViewById(R.id.textGoal);
+        goalFig = findViewById(R.id.textGoalFigure);
 
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
@@ -112,16 +120,34 @@ public class ResultsPage extends AppCompatActivity {
     public void weeklyResults (View v){
         top.setText("Your Weekly C02 Emissions:");
         label.setText(n + " kg");
+
+        ukAvgText.setText("UK average weekly CO2 emissions:");
+        ukAvgFig.setText("190kg");
+
+        goalText.setText("Your weekly CO2 emissions goal should be:") ;
+        goalFig.setText("50kg");
     }
 
     public void monthlyResults (View v){
         double m = n * 4;
         top.setText("Your Monthly C02 Emissions:");
         label.setText(m + " kg");
+
+        ukAvgText.setText("UK average monthly CO2 emissions:");
+        ukAvgFig.setText("825kg");
+
+        goalText.setText("Your monthly CO2 emissions goal should be:") ;
+        goalFig.setText("600kg");
     }
     public void annualResults (View v){
         double o = n * 52;
         top.setText("Your Annual C02 Emissions:");
         label.setText(o + " kg");
+
+        ukAvgText.setText("UK average yearly CO2 emissions:");
+        ukAvgFig.setText("9,880kg");
+
+        goalText.setText("Your yearly CO2 emissions goal should be:") ;
+        goalFig.setText("7,000kg");
     }
 }
