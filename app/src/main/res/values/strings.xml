@@ -81,6 +81,8 @@
     <string name="type_computer">PC use</string>
     <string name="type_train">Rail travel</string>
 
+    <string name ="type_hotel">Hotel stay</string>
+
     <string name="type_lecture">Lectures</string>
     <string name="type_gym">Gym use</string>
     <string name="type_printer">Printing</string>
@@ -103,6 +105,7 @@
     <string name="always_text_into_1">Don\'t forget that no one is perfect so don\'t give up when you feel like your carbon footprint is too high</string>
     <string name="start">Start</string>
     <string name="resultsButton">Results</string>
+    <string name="fc_hotel_nights">Nights in hotel</string>
 
 
 </resources>
