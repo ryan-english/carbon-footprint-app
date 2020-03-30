@@ -28,6 +28,7 @@ public class EmissionCalculatorTable {
         conversionTable.put("type_gym",0.8f);
         conversionTable.put("type_library",0.1f);
         conversionTable.put("type_lecture",0.1f);
+        conversionTable.put("type_hotel", 0.6f);
 
     }
 

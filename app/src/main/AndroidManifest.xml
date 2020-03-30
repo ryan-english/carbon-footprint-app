@@ -8,7 +8,10 @@
         android:icon="@drawable/icon_footprint"
         android:roundIcon="@drawable/icon_footprint"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.Launcher">
+        android:theme="@style/AppTheme.Launcher">  
+        <activity android:name=".FlightCalculator"
+            android:exported="true" />
+
         <activity android:name=".AlternateEducation" />
         <activity android:name=".Education" />
         <activity android:name=".UserInput" />

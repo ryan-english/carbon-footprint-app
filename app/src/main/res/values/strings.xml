@@ -81,6 +81,8 @@
     <string name="type_computer">PC use</string>
     <string name="type_train">Rail travel</string>
 
+    <string name ="type_hotel">Hotel stay</string>
+
     <string name="type_lecture">Lectures</string>
     <string name="type_gym">Gym use</string>
     <string name="type_printer">Printing</string>
@@ -109,6 +111,7 @@
 
     <string name="start">Start</string>
     <string name="resultsButton">Results</string>
+    <string name="fc_hotel_nights">Nights in hotel</string>
     <string name="textGoal">Your weekly CO2 emissions goal should be:</string>
     <string name="textAverage">UK average weekly CO2 emissions:</string>
     <string name="weeklyButton">weekly</string>
