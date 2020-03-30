@@ -87,15 +87,16 @@
     <string name="type_library">Library use</string>
     <string name="type_laptop">Laptop use</string>
 
-    <string name="tipsInfo">Would you like to learn more about how to reduce your carbon footprint? Click below and find out how you can save the planet!</string>
+    <string name="tipsInfo">Would you like to learn more about \nhow to reduce your carbon footprint? Click below and find out how you can save the planet!</string>
     <string name="tips">Tips</string>
 
     <string name="tips_headline">10 tips to reduce your carbon footprint</string>
     <string name="travel_info_text_0">Switching from cars to buses/trains is a great way to reduce your carbon footprint</string>
     <string name="travel_info_text_1">If you have to use a car to get to the university ask your neighbours if they need a ride</string>
     <string name="travel_info_text_2">Cycle and help the planet while getting fit. All students can use Nextbike bikes for 30 mins free of charge</string>
+
     <string name="campus_info_text_0">Natural light is 100% better for your eyes so switch off that light</string>
-    <string name="campus_info_text_1">Bring your own water bottle and not only there will be less plastic but you also cut down all the production and transportation carbon</string>
+    <string name="campus_info_text_1">Bring your own water bottle and not only will there be less plastic but you also cut down all the production and transportation carbon</string>
     <string name="campus_info_text_2">Use the stairs instead of an elevator and you do not need the gym anymore</string>
 
     <string name="devices">Devices</string>
@@ -110,6 +111,9 @@
     <string name="resultsButton">Results</string>
     <string name="textGoal">Your weekly CO2 emissions goal should be:</string>
     <string name="textAverage">UK average weekly CO2 emissions:</string>
+    <string name="weeklyButton">weekly</string>
+    <string name="monthlyTitle">monthly</string>
+    <string name="annualTitle">annual</string>
 
 
 </resources>
