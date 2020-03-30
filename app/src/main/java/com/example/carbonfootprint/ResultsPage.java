@@ -1,12 +1,16 @@
 package com.example.carbonfootprint;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TableLayout;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.BarChart;
@@ -17,11 +21,26 @@ import java.util.LinkedHashMap;
 
 
 public class ResultsPage extends AppCompatActivity {
+    private TextView label;
+    private TextView top;
+    private TextView ukAvgText;
+    private TextView ukAvgFig;
+    private TextView goalText;
+    private TextView goalFig;
+    private double n;
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.HiddenTitleTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results_page);
+        label = findViewById(R.id.textTotal);
+        top = findViewById(R.id.textResult);
+        ukAvgFig = findViewById(R.id.textAverageFigure);
+        ukAvgText = findViewById(R.id.textAverage);
+        goalText = findViewById(R.id.textGoal);
+        goalFig = findViewById(R.id.textGoalFigure);
 
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
@@ -71,13 +90,13 @@ public class ResultsPage extends AppCompatActivity {
         container.addView(bar);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     private void addTable(LinkedHashMap<String, Float> ht, int screenwidth, int screenheight) {
-        LinearLayout container = findViewById(R.id.layout);
+        TableLayout container = findViewById(R.id.emissionsTable);
         container.addView(ChartBuilder.buildTable(ht,this));
     }
 
     private void addTotal(LinkedHashMap<String, Float> ht) {
-        double n = 0;
         Iterator<String> iterator = ht.keySet().iterator();
         while (iterator.hasNext()) {
             String key = iterator.next();
@@ -85,7 +104,50 @@ public class ResultsPage extends AppCompatActivity {
             n = n + value;
         }
         n = Math.round(n);
-        TextView label = findViewById(R.id.textTotal);
-        label.setText("Total weekly CO2 Emissions: " +n+ "kg");
+        top.setText("Your Weekly C02 Emissions:");
+        label.setText(n + "kg");
+    }
+
+    public void sendResults(View view){
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "My total weekly CO2 emissions is " + n + "kg. Try the CARBN app to find out yours!");
+        sendIntent.setType("text/plain");
+
+        Intent shareIntent = Intent.createChooser(sendIntent, null);
+        startActivity(shareIntent);
+    }
+    public void weeklyResults (View v){
+        top.setText("Your Weekly C02 Emissions:");
+        label.setText(n + " kg");
+
+        ukAvgText.setText("UK average weekly CO2 emissions:");
+        ukAvgFig.setText("190kg");
+
+        goalText.setText("Your weekly CO2 emissions goal should be:") ;
+        goalFig.setText("50kg");
+    }
+
+    public void monthlyResults (View v){
+        double m = n * 4;
+        top.setText("Your Monthly C02 Emissions:");
+        label.setText(m + " kg");
+
+        ukAvgText.setText("UK average monthly CO2 emissions:");
+        ukAvgFig.setText("825kg");
+
+        goalText.setText("Your monthly CO2 emissions goal should be:") ;
+        goalFig.setText("600kg");
+    }
+    public void annualResults (View v){
+        double o = n * 52;
+        top.setText("Your Annual C02 Emissions:");
+        label.setText(o + " kg");
+
+        ukAvgText.setText("UK average yearly CO2 emissions:");
+        ukAvgFig.setText("9,880kg");
+
+        goalText.setText("Your yearly CO2 emissions goal should be:") ;
+        goalFig.setText("7,000kg");
     }
 }

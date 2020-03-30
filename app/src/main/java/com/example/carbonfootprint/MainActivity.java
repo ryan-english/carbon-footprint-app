@@ -10,16 +10,22 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.Layout;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.HiddenTitleTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         EmissionCalculatorTable.initialise();
+
+
 
         TextView appInfo = findViewById(R.id.appInfo);
         appInfo.setJustificationMode(Layout.JUSTIFICATION_MODE_INTER_WORD);
@@ -34,9 +40,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(survey);
     }
 
-    public void openTips (View view)
+    public void backTips (View view)
     {
-        Intent tips = new Intent(this, Education.class);
+        Intent tips = new Intent(this, AlternateEducation.class);
         startActivity(tips);
+
+
     }
 }

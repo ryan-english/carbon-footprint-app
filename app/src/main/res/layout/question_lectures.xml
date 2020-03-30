@@ -19,7 +19,9 @@
             android:layout_marginTop="40dp"
             android:text="@string/question_lecture"
             android:textColor="#FFFFFF"
-            android:layout_marginLeft="55dp" />
+            android:layout_marginLeft="55dp"
+            android:textSize="15sp"
+            app:fontFamily="@font/source_sans_pro"/>
 
         <RadioGroup
             android:layout_width="310dp"
@@ -36,6 +38,8 @@
                 android:buttonTint="@color/pastelTeal"
                 android:text="@string/answer_lecture_0"
                 android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                app:fontFamily="@font/source_sans_pro"
                 android:tag="0.0"/>
 
             <RadioButton
@@ -44,6 +48,8 @@
                 android:buttonTint="@color/pastelTeal"
                 android:text="@string/answer_lecture_1"
                 android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                app:fontFamily="@font/source_sans_pro"
                 android:tag="2.0"/>
 
             <RadioButton
@@ -52,6 +58,8 @@
                 android:buttonTint="@color/pastelTeal"
                 android:text="@string/answer_lecture_2"
                 android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                app:fontFamily="@font/source_sans_pro"
                 android:tag="5.0"/>
 
             <RadioButton
@@ -60,6 +68,8 @@
                 android:buttonTint="@color/pastelTeal"
                 android:text="@string/answer_lecture_3"
                 android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                app:fontFamily="@font/source_sans_pro"
                 android:tag="8.0"/>
 
 
